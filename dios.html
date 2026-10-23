@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendaciones | Inteligencia Artificial </title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      grid-area: 10vw;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      justify-content: center;
+          align-items: center;
+          overflow-x: hidden;
+          overflow-y: auto;
+          background:#ffff;
+
+      
+        }
+        header{
+          background: linear-gradient(to right, #1e3a8a, #2563eb);
+          color: white;
+          padding: 30px 20px;
+          width: 200vw;
+          text-align: center;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+        }
+        nav{
+          background: #1e40af;
+          width: 200vw;
+          height: 6vh;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: -8px 4px 5px gray;
+        }
+        .letra{
+          margin-top:0.5vw;
+          font-size: 1.5vw;
+        }
+        nav a{
+          text-decoration: none;
+          color: white;
+          margin: 0 20px;
+          font-weight: bold;
+          transition: all 1s;
+        
+        }
+        nav a:hover {
+          color: #93c5fd;
+          scale: 1.1;
+        }
+        .especial{
+          color: #93c5fd;
+          scale: 1.1;
+          display: flex;
+
+        }
+        .presentacion{
+          width: 85vw;
+          height: 40vh;
+          margin: 4vw auto;
+          text-align: center;
+          background: linear-gradient(135deg, #ffffff, #eaf3ff);
+          border: 0.1vw solid #dbeafe;
+          border-radius: 2vw;
+          box-shadow: 0 0.7vw 2vw rgba(30, 58, 138, 0.09);
+          justify-content: center;
+
+        }
+        .presentacion h2{
+          margin: 0 0 1.5vw;
+          color: #1e3a8a;
+          font-size: clamp(2.3vw, 2.5vw, 3.5vw);
+          margin-top: 3vh;
+        }
+        .presentacion p{
+          max-width: 85vw;
+          margin: auto;
+          color: #475569;
+          font-size: clamp(1.4vw, 1.25vw, 1.8vw);
+          line-height: 1.5;
+          margin-top: 8vh;
+        }
+        .seccion{
+          width: 90vw;
+          max-width: 90vw;
+          margin: 2vw auto 5vw;
+        }
+        .titulo{
+          width: 100vw;
+          margin: 0 0 2.5vw;
+          padding-left: 1.5vw;
+          border-left: 0.6vw solid #2563eb;
+          color: #1e3a8a;
+          font-size: clamp(2vw, 2.5vw, 3vw);
+          text-align: left;
+        }
+        .subtitulo{
+          margin: -1.5vw 0 2.5vw;
+          color: #64748b;
+          font-size: clamp(1.4vw, 1.5vw, 1.7vw);
+          line-height: 1.7;
+        }
+        .tarjetas{
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 2.5vw;
+        }
+        .tarjeta {
+          position: relative;
+          overflow: hidden;
+          padding: 2.7vw;
+          min-height: 2vw;
+          background: linear-gradient(135deg, #ffffff, #eaf3ff);
+          border: 0.1vw solid #dbeafe;
+          border-radius: 2vw;
+          box-shadow: 0 0.8vw 2.2vw rgba(30, 58, 138, 0.09);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tarjeta:hover {
+          transform: translateY(-0.5vw);
+          box-shadow: 0 1.4vw 3vw rgba(30, 58, 138, 0.15);
+        }
+        .icono{
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 4.8vw;
+          height: 4.8vw;
+          border-radius: 1.5vw;
+          background: #dbeafe;
+          font-size: 2.5vw;
+        }
+        .tarjeta h4{
+            margin: 1.7vw 0 1vw;
+            color: #1e3a8a;
+            font-size: clamp(1.7vw, 1.8vw, 2.1vw);
+       }
+       .tarjeta p{
+         margin: 0;
+         color: #475569;
+         font-size: clamp(1.05vw, 1.2vw, 1.6vw);
+         line-height: 1.8;
+
+       }
+       .impacto {
+          background: linear-gradient(135deg, #172554, #1d4ed8, #2563eb);
+          color: white;
+          padding: 2vw;
+          border-radius: 2vw;
+          align-items: center;
+          box-shadow: 0 1vh 2vw rgba(0,0,0,0.2);
+          width: 70vw;
+          height: 35vw;
+          min-height: 40vh;
+          margin: 5vh auto;
+          display: flex;
+          text-align: center;
+          flex-wrap: wrap;
+          gap: 0.1vw;
+
+        }
+        h5{
+          margin-top: 0.5vh;
+          width: 100vw;
+          font-size: 2.1vw;
+          text-align: left;
+          color:white;
+        }
+        .adentro{
+          width: 65vw;
+          font-size: 3vh;
+          margin-top: -10vh;
+          text-align: center;
+        }
+        .mas{
+         background: rgba(255,255,255,0.13);
+         border: 1px solid rgba(255,255,255,0.3);
+         padding: 2vw;
+         width: 30vw;
+         height: 16vh;
+         margin: 0.3vw;
+         border-radius: 1vw;
+        }
+        .dentro h6 {
+         margin-top: 0vh;
+         text-align: left;
+         font-size: 1.6vw;
+
+        }
+        .dentro p{
+          font-size: 1.2vw;
+          margin-top: -2vw;
+          text-align: center;
+        }
+        footer {
+          background: #1e3a8a;
+          color: white;
+          text-align: center;
+          width: 270vw;
+          height: 20vh;
+
+         }
+         footer p{
+           margin-top: 3vh;
+           font-size: 2vh;
+           color: white;
+        }
+        .neo{
+          width: 9vw;
+          height: 16vh;
+          margin-left: 80vh;
+          margin-top: -6vh;
+        }
+        .timbre{
+        text-decoration: none;
+          display: inline-block;
+          color:white;
+          background: linear-gradient(135deg, #2563eb, #1e3a8a);
+          width: 10vw;
+          height: 5vh;
+          margin-top: 2vw;
+          margin-left: -35vw;
+          border-radius: 2vw;
+          transition: all 1s;
+          text-align: center;
+          line-height: 5vh;
+          border-left: 6px solid #CFE7FA; 
+          box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+       
+       
+
+
+
+    
+  </style>
+</head>
+<body>
+    <header>
+     <h1 style="display:inline; margin-left:10px;">Descubre el Poder de la Inteligencia Artificial</h1>
+     <p class="letra">Explora el futuro con la tecnología IA</p>
+    </header>
+    <nav>
+      <a href="isabella.html">Introduccion</a>
+      <a href="por.html">Desarrollo</a>
+      <a href="dios"class="especial">Recomendaciones</a>
+      <a href="ia.html">Actividad</a>
+    </nav>
+    <section class="presentacion">
+      <h2>¿Cómo podemos usar la IA de forma adecuada?</h2>
+      <p>Podemos utilizar la inteligencia artificial de manera adecuada cuando la vemos como una herramienta que nos ayuda a aprender, comprender información y resolver dudas, sin dejar de pensar por nosotros mismos. Para ello, es importante usarla de forma responsable, analizar sus respuestas y recordar que nuestras decisiones, ideas y conocimientos deben seguir siendo propios.</p>
+      
+    </section>
+    <section class="seccion">
+      <h3 class="titulo">01. Recomendaciones para usar la IA</h3>
+      <p class="subtitulo">Pequeñas acciones que nos ayudan a aprovechar la tecnología sin dejar de aprender por nuestra cuenta.</p>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="icono">🔎</span>
+          <h4>Verifica la información.</h4>
+          <p>Compara las respuestas de la IA con libros, páginas confiables u otras fuentes. Recuerda que puede cometer errores.</p>
+          
+        </article>
+        <article class="tarjeta">
+          <span class="icono">🧠</span>
+          <h4>Piensa antes de preguntar.</h4>
+          <p>Intenta resolver la actividad por tu cuenta primero. Después, utiliza la IA para aclarar dudas o revisar tu procedimiento.</p>
+          
+        </article>
+        <article class="tarjeta">
+          <span class="icono">📚</span>
+          <h4>Aprende, no copies.</h4>
+          <p>Pide explicaciones con ejemplos y escribe las respuestas con tus propias palabras para demostrar lo que comprendiste.</p>
+          
+        </article>
+      </div>  
+    </section>
+    <div class="impacto">
+    <h5>02. La IA como apoyo, no como reemplazo</h5>
+    <div class="mas">
+      <div class="dentro">
+        <h6>Intenta por tu cuenta</h6>
+        <p>Antes de consultar la IA, piensa en posibles respuestas y utiliza tus conocimientos para resolver la actividad.</p>
+      </div>
+    </div>
+    <div class="mas">
+     <div class="dentro">
+      <h6>Pide explicaciones, no solo respuestas</h6>
+      <p>Solicita ejemplos, pistas y explicaciones paso a paso que te permitan comprender el tema.</p>
+      </div>
+    </div>
+  <div class="mas">
+    <div class="dentro">
+    <h6>Comprueba lo aprendido</h6>
+    <p>Verifica la información y asegúrate de entender por qué una respuesta es correcta antes de aceptarla.</p>
+  </div>
+  </div>
+  <div class="mas">
+  <div class="dentro">
+    <h6>Construye tus propias ideas</h6>
+    <p>Expresa lo que aprendiste con tus palabras y aporta tus opiniones, creatividad y razonamiento.</p>
+    <a href="isabella.html" class="timbre">inicio</a>
+  </div>
+</div>
+</div>
+<footer>
+   <p>Proyecto feria de ciencia Centro Educativo Neosistemas 2026.</p>
+    <img src="logo.png"class="neo">
+</footer>
+
+
+      
+
+</body>
+</html> 

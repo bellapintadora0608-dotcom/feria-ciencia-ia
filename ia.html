@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exceso de la IA | Autoevaluación</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f9fafb;
+      color: #1e3a8a;
+      text-align: center;
+    }
+
+    header{
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      color: white;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    header h1{
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    header p{
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav{
+      background: #1e40af;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    nav a:hover{
+      color: #93c5fd;
+      transform: scale(1.1);
+    }
+
+    section{
+      padding: 50px 20px;
+    }
+
+    .opciones{
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .opciones a{
+      width: 220px;
+      height: 120px;
+      background: #e0f2fe;
+      color: #1e3a8a;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+    }
+    .opciones a:hover{
+      background: #2563eb;
+      color: white;
+      transform: translateY(-8px);
+    }
+
+    button{
+      margin-top: 50px;
+      padding: 20px 60px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right, #2563eb, #1e3a8a);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      animation: pulso 4s infinite;
+    }
+    button:hover{
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      transform: scale(1.05);
+    }
+
+    @keyframes pulso {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    .timbre{
+      text-decoration: none;
+      display: inline-block;
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      width: 12vw;
+      height: 5vh;
+      border-radius: 2vw;
+      transition: all 1s;
+      text-align: center;
+      line-height: 5vh;
+      border-left: 6px solid #CFE7FA; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      margin: 30px 0;
+      font-weight: bold;
+    }
+    .timbre:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    }
+
+    footer{
+      margin-top: 20px;
+      background: #1e3a8a;
+      color: white;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-contenido {
+      display: flex;
+      align-items: center;
+      gap: 80px; 
+    }
+
+    .logo {
+      height: 120px; 
+      width: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Autoevaluación</h1>
+    <p>Reflexiona sobre tu relación con la IA</p>
+  </header>
+
+  <nav>
+  </nav>
+
+  <section>
+    <h2>Selecciona un modo</h2>
+    <div class="opciones">
+      <a href="modo.html">Modo 1</a>
+      <a href="pri.html">Modo 2</a>
+      <a href="file:///D:/Documentos%20de%20Usuario/Pictures/ricardo%20X%20miguel/clase.html">Modo 3</a>
+    </div>  
+
+    <button onclick="alert('¡Bienvenido a la autoevaluación!')">Empezamos</button>
+  </section>
+
+  <!-- Botón con el estilo "timbre" apuntando a isabellita.html -->
+  <div>
+    <a href="isabella.html" class="timbre">inicio</a>
+  </div>
+
+  <footer>
+    <div class="footer-contenido">
+      <p>Proyecto Feria de ciencia Neosistemas</p>
+      <img class="logo" src="logo.png" alt="Logo">
+    </div>
+  </footer>
+</body>
+</html>

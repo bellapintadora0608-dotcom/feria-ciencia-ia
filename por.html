@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desarrollo | Inteligencia Articial </title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      grid-area: 10vw;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      justify-content: center;
+          align-items: center;
+          overflow-x: hidden;
+          overflow-y: auto;
+          background:#ffff;
+
+      
+        }
+        header{
+          background: linear-gradient(to right, #1e3a8a, #2563eb);
+          color: white;
+          padding: 30px 20px;
+          width: 200vw;
+          text-align: center;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+        }
+        
+        nav{
+          background: #1e40af;
+          width: 200vw;
+          height: 6vh;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: -8px 4px 5px gray;
+        }
+        .letra{
+          margin-top:0.5vw;
+          font-size: 1.5vw;
+        }
+        nav a{
+          text-decoration: none;
+          color: white;
+          margin: 0 20px;
+          font-weight: bold;
+          transition: all 1s;
+        
+        }
+        nav a:hover {
+          color: #93c5fd;
+          scale: 1.1;
+        }
+        .especial{
+          color: #93c5fd;
+          scale: 1.1;
+          display: flex;
+
+        }
+        .presentacion {
+          text-align: center;
+          padding: 45px 20px 20px;
+          font-size: 1.3vw;
+          line-height: 1.7;
+          color:#1e3a8a;
+          background: transparent;
+          width: 70vw;
+          height: 40vh;
+
+        }
+        .presentacion h2{
+          color: #1e3a8a;
+          font-size: 35px;
+          margin-bottom: 12px;
+
+        }
+        .presentacion p {
+          line-height: 1.7;
+          color: #334155;
+          margin-top: -7vh;
+          font-size: 1.3vw;
+        }
+        section{
+          flex-wrap: wrap;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+        }
+         h3{
+         font-size: 26px;
+         margin-bottom: 25px;
+         border-left: 6px solid #2563eb;
+         padding-left: 15px;
+         color:#1e3a8a;
+         text-align: left;
+         margin-right: 60vw;
+      }
+      .tarjetas{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2vw;
+      }
+      .tarjeta{
+        background: linear-gradient(135deg, #ffffff, #dcecff);
+            border-radius: 18px;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.30);
+            border: 1px solid #bfdbfe;
+            transition: 0.3s;
+            width: 40vw;
+            height: 30vh;
+            
+
+
+      }
+      .tarjeta:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 24px rgba(30,58,138,0.22);
+        }
+        strong{
+          background: #2563eb;
+          color: white;
+          display: inline-block;
+          padding: 7px 13px;
+          border-radius: 10px;
+          font-weight: bold;
+          margin-bottom: 10px; 
+        }
+        .tarjeta h4 {
+           margin-top: 0.5vh;
+           font-size: 1.5vw;
+           text-align: left;
+           color:#1e3a8a;
+        }
+        .impacto {
+          background: linear-gradient(135deg, #1e3a8a, #2563eb);
+          color: white;
+          padding: 2vw;
+          border-radius: 2vw;
+          align-items: center;
+          box-shadow: 0 1vh 2vw rgba(0,0,0,0.2);
+          width: 70vw;
+          height: 45vw;
+          min-height: 40vh;
+          margin: 5vh auto;
+          display: flex;
+          text-align: center;
+          flex-wrap: wrap;
+
+        }
+        h5{
+          margin-top: 0.5vh;
+          width: 100vw;
+          font-size: 2.1vw;
+          text-align: left;
+          color:white;
+        }
+        .adentro{
+          width: 65vw;
+          font-size: 3vh;
+          margin-top: -10vh;
+          text-align: center;
+        }
+        .mas{
+         background: rgba(255,255,255,0.13);
+         border: 1px solid rgba(255,255,255,0.3);
+         padding: 2vw;
+         width: 30vw;
+         height: 16vh;
+         margin: 0.3vw;
+         border-radius: 1vw;
+        }
+        .dentro h6 {
+         margin-top: 0vh;
+         text-align: left;
+         font-size: 1.6vw;
+
+        }
+        .dentro p{
+          font-size: 1.2vw;
+          margin-top: -2vw;
+          text-align: center;
+        }
+        .intro{
+           width: 75vw;
+           font-size: 1.3vw;
+           line-height: 1.7;
+           color: #334155;
+           text-align: center;
+        }
+        .lobulos{
+            width: 80vw;
+    height: 160vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3vw;
+    margin: 2vw auto;
+    background:none;
+         
+        }
+        .lobulo {
+    width: 30vw;
+    height: 60vh;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 1px solid #93c5fd;
+    border-radius: 18px;
+    padding: 2vw;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.30);
+    transition: 0.3s;
+
+   }
+        .lobulo:hover {
+          transform: translateY(-7px);
+          box-shadow: 0 12px 24px rgba(30, 58, 138, 0.22);
+      }
+        .icono{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          width: 65px;
+          height: 65px;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 20px;
+          box-shadow: 0 5px 14px rgba(30, 58, 138, 0.08);
+          font-size: 32px;
+        }
+        .cabecera-lobulo {
+         display: flex;
+         align-items: center;
+         gap: 15px;
+        }
+        .lobulo h4 {
+         color: #1e3a8a;
+         font-size: 2vw;
+         margin: 0;
+        }
+        .funcion{
+         margin-top: 3vh;
+         padding: 1.5vw;
+         background: rgba(255, 255, 255, 0.85);
+    border-radius: 1vw;
+    color: #1e3a8a;
+    font-size: 1.1vw;
+    line-height: 1.7;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    
+    }
+    .efecto {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 1.5vw;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 1vw;
+    color: #1e3a8a;
+    font-size: 1.1vw;
+    line-height: 1.7;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+ }
+    .funcion strong,
+    .efecto strong {
+    background: none !important;
+    color: #1e3a8a;
+    padding: 0;
+    border-radius: 0;
+
+    }
+    .lobulotemporal {
+    width: 30vw;
+    height: 60vh;
+    background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+    border: 1px solid #c4b5fd;
+    border-radius: 18px;
+    padding: 2vw;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.30);
+    transition: 0.3s;
+
+   }
+   .lobulotemporal h4 {
+    color: #1e3a8a;
+    font-size: 2vw;
+    margin: 0;
+   }
+   .lobulotemporal:hover{
+      transform: translateY(-7px);
+          box-shadow: 0 12px 24px rgba(30, 58, 138, 0.22);
+      }
+      footer{
+        background: #1e3a8a;
+          color: white;
+          text-align: center;
+          width: 200vw;
+          height: 19vh;
+      }
+      footer p{
+        margin-top: -8vh;
+           font-size: 2vh;
+           color: white;
+      }
+      .timbre{
+        text-decoration: none;
+          display: inline-block;
+          color:white;
+          background: linear-gradient(135deg, #2563eb, #1e3a8a);
+          width: 10vw;
+          height: 5vh;
+          border-radius: 2vw;
+          transition: all 1s;
+          text-align: center;
+          line-height: 5vh;
+          border-left: 6px solid #CFE7FA; 
+          box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+       }
+       .neo{
+          width: 9vw;
+          height: 16vh;
+          margin-left: 80vh;
+          margin-top: -6vh;
+        }
+        footer p{
+          margin-top: 3vh;
+          font-size: 2vh;
+          color: white;
+        }
+
+      
+      
+      
+
+
+
+
+
+    
+  </style>
+</head>
+<body>
+<header>
+    <h1 style="display:inline; margin-left:10px;">Descubre el Poder de la Inteligencia Artificial</h1>
+    <p class="letra">Explora el futuro con la tecnología IA</p>
+  </header>
+  <nav>
+    <a href="isabellita.html">Introduccion</a>
+    <a href="por.html" class="especial">Desarrollo</a>
+    <a href="dios.html">Recomendaciones</a>
+    <a href="ia.html">Actividad</a>
+  </nav>
+  <section class="presentacion">
+    <h2>¿Cómo influye la IA en nuestra mente?</h2>
+    <p>La inteligencia artificial puede ayudarnos a aprender y resolver dudas,
+      pero su uso excesivo puede reducir las oportunidades de practicar
+      habilidades importantes. Por eso, es necesario comprender cómo la
+      utilizamos y qué efectos puede tener en nuestro aprendizaje.</p>
+  </section>
+  <section>
+    <h3 class="titulo">01. Conceptos fundamentales</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <strong>01</strong>
+          <h4>Pensamiento crítico</h4>
+          <p>Es la capacidad de analizar información, cuestionar ideas, evaluar si algo es verdadero o confiable y tomar decisiones propias basadas en razones y evidencias, en lugar de aceptar todo sin reflexionar.</p>
+        </article>
+        <article class="tarjeta">
+          <strong>02</strong>
+          <h4>Creatividad</h4>
+          <p>Es la capacidad que tenemos las personas para imaginar, crear y desarrollar ideas nuevas u originales, encontrar diferentes soluciones a un problema y expresar nuestros pensamientos de maneras únicas.</p>
+        </article>
+         <article class="tarjeta">
+          <strong>03</strong>
+          <h4>Razonamiento</h4>
+          <p>Es la capacidad que tenemos las personas para analizar información, relacionar ideas y utilizar la lógica para comprender situaciones, resolver problemas y llegar a conclusiones.</p>
+        </article>
+        <article class="tarjeta">
+          <strong>04</strong>
+          <h4>Análisis</h4>
+          <p>Es la capacidad que tenemos las personas para examinar y comprender una información o situación, identificar sus partes más importantes y relacionarlas para entender mejor un tema o encontrar una solución.</p>
+        </article>
+        <article class="tarjeta">
+          <strong>05</strong>
+          <h4>Memoria</h4>
+          <p>Es la capacidad que tenemos las personas para almacenar, conservar y recordar información, experiencias y conocimientos que adquirimos a lo largo del tiempo. Nos permite aprender cosas nuevas y utilizar lo que hemos aprendido en diferentes situaciones.</p>
+        </article>
+        <article class="tarjeta">
+          <strong>06</strong>
+          <h4>Aprendizaje</h4>
+          <p>Es el proceso mediante el cual las personas adquieren nuevos conocimientos, habilidades y experiencias a través del estudio, la práctica y la observación. Nos permite comprender información, desarrollar capacidades y aplicar lo aprendido en diferentes situaciones.</p>
+        </article>
+      </div>
+   </section>
+   <section>
+    <div class="impacto">
+    <h5>02. El impacto del uso excesivo</h5>
+    <p class="adentro">Cuando utilizamos la IA para hacer todas nuestras tareas,podemos dejar de practicar habilidades que necesitamos para aprender. El problema no es usarla, sino depender demasiado de ella.</p>
+    <div class="mas">
+      <div class="dentro">
+        <h6>Dependencia</h6>
+        <p>Podemos acostumbrarnos a buscar respuestas inmediatas sin intentar resolver los problemas primero.</p>
+      </div>
+    </div>
+    <div class="mas">
+     <div class="dentro">
+      <h6>Menor práctica</h6>
+      <p>Si dependemos demasiado de la IA, podemos practicar menos nuestras habilidades para pensar y resolver problemas.</p>
+      </div>
+    </div>
+  <div class="mas">
+    <div class="dentro">
+    <h6>Información incorrecta</h6>
+    <p>La IA puede dar respuestas equivocadas, por eso debemos verificar la información antes de aceptarla.</p>
+  </div>
+  </div>
+  <div class="mas">
+  <div class="dentro">
+    <h6>Menor autonomía</h6>
+    <p>Podemos perder la costumbre de resolver tareas por nuestra cuenta si dejamos que la IA haga todo por nosotros.</p>
+  </div>
+</div>
+   </section>
+   <section style="width: 100%; flex-direction: column; align-items: center;">
+    <h3>03. ¿Qué pasa en nuestro cerebro?</h3>
+    <p class="intro">Nuestro cerebro está formado por diferentes regiones que trabajan en conjunto para permitirnos pensar, recordar, comprender, interpretar información y aprender cosas nuevas.</p>  
+    <div class="lobulos">
+      <article class="lobulo">
+        <div class="cabecera-lobulo">
+        <div class="icono">🧠</div>
+        <h4>Lóbulo frontal</h4>
+        </div>
+      <div class="funcion">
+        <strong>¿Qué hace?</strong>
+       Es la región del cerebro ubicada detrás de la frente, encargada de pensar, planificar, resolver problemas y tomar decisiones.
+    </div>
+     <p class="efecto">
+        <strong>¿Cómo se ve afectado?</strong>
+        Si dejamos que la IA resuelva todos los ejercicios,
+        practicamos menos la toma de decisiones y la resolución
+        de problemas por nuestra cuenta.
+    </p>
+    </article>
+
+       <article class="lobulotemporal">
+        <div class="cabecera-lobulo">
+         <div class="icono">💭</div>
+         <h4>Lóbulo temporal</h4>
+         </div>
+          <div class="funcion">
+        <strong>¿Qué hace?</strong>
+        Participa en la memoria, la comprensión del lenguaje
+        y el reconocimiento de sonidos.
+      </div>
+      <p class="efecto">
+        <strong>¿Cómo se ve afectado?</strong>
+        Puede reducir la práctica de recordar información, comprender el significado de las palabras y relacionar nuevos conocimientos con los que ya tenemos.
+    </p>
+
+       </article>
+       <article class="lobulotemporal">
+        <div class="cabecera-lobulo">
+         <div class="icono">📚</div>
+         <h4>Lóbulo parietal</h4>
+         </div>
+          <div class="funcion">
+        <strong>¿Qué hace?</strong>
+         Integra información sensorial y participa en la
+         orientación espacial, la atención y ciertos cálculos.
+      </div>
+      <p class="efecto">
+        <strong>¿Cómo se ve afectado?</strong>
+       Puede reducir la práctica de interpretar gráficos, comparar datos y reconocer patrones en la información.
+    </p>
+
+
+       </article>
+      <article class="lobulo">
+        <div class="cabecera-lobulo">
+        <div class="icono">👁️</div>
+        <h4>Lóbulo occipital</h4>
+        </div>
+      <div class="funcion">
+        <strong>¿Qué hace?</strong>
+        Se encarga principalmente de procesar la información
+        visual, como formas, colores y movimiento.
+    </div>
+     <p class="efecto">
+        <strong> ¿Cómo se ve afectado?</strong>
+         El uso excesivo de la IA podría reducir la práctica de habilidades visuales, como interpretar imágenes, reconocer formas y comprender gráficos por cuenta propia.
+    </p>
+      </article>
+      <a href="isabella.html" class="timbre">inicio</a>
+    </div>
+  </section>
+  <footer>
+    <p>Proyecto feria de ciencia Centro Educativo Neosistemas 2026.</p>
+    <img src="logo.png"class="neo">
+  </footer>
+
+</body>
+</html> 
